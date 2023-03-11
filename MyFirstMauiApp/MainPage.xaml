@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MyFirstMauiApp.Models"
+             x:Class="MyFirstMauiApp.MainPage">
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="Fill">
+            <Button Text="Service Exterior"
+                    CommandParameter="{x:Static models:QuestionType.ServiceExterior}"
+                    Clicked="GoToQuestion"
+                    Margin="10,10"
+            >
+            </Button>
+            <Button Text="Service Reception"
+                    CommandParameter="{x:Static models:QuestionType.ServiceReception}"
+                    Clicked="GoToQuestion"
+                    Margin="10,10"
+            >
+            </Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
