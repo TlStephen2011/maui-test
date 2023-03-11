@@ -7,7 +7,10 @@
              xmlns:controls="clr-namespace:MyFirstMauiApp"
              Title="Service Exterior">
     <ScrollView>
-        <controls:TestControl />
+        <StackLayout>
+            <controls:ServiceDetailControl />
+            <controls:ServiceDetailControl />
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>

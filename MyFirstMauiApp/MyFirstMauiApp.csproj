@@ -63,6 +63,9 @@
 	  <MauiXaml Update="ServiceDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ServiceDetailControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ServiceExterior.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

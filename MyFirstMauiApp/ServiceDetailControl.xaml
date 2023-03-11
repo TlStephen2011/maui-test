@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMauiApp.ServiceDetailControl"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <toolkit:Expander>
+        <toolkit:Expander.Header>
+            <Button Text="Rubbish bins or skip bins are emptied (not overflowing)"
+                    FontAttributes="Bold"
+                    Margin="10,10"
+                    LineBreakMode="WordWrap"/>
+        </toolkit:Expander.Header>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <CheckBox />
+                <Label Text="Done" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="12, 0">
+                <Label Text="Rating:" VerticalOptions="Center" />
+                <Stepper x:Name="Stepper" Minimum="0" Maximum="5" Increment="1" Value="{Binding Rating}" Margin="10, 0, 0, 0" />
+                <Label Text="{Binding Value, Source={x:Reference Stepper}}" VerticalOptions="Center" Margin="10,0" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Comment:" VerticalOptions="Center" Margin="10,0" />
+                <Editor HorizontalOptions="FillAndExpand" Text="{Binding Comment}" Margin="15,0" HeightRequest="120" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Action Date:" VerticalOptions="Center" Margin="10,0,20,0" />
+                <DatePicker HorizontalOptions="Fill" Date="{Binding ActionDate}" />
+            </StackLayout>
+        </StackLayout>
+    </toolkit:Expander>
+</ContentView>
