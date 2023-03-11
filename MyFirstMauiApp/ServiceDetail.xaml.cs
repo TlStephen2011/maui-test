@@ -1,6 +1,6 @@
 namespace MyFirstMauiApp;
 
-public partial class ServiceDetailCustomControl : StackLayout {
+public partial class ServiceDetailCustomControl : ContentView {
     public static readonly BindableProperty IsDoneProperty =
         BindableProperty.Create(nameof(IsDone), typeof(bool), typeof(ServiceDetailCustomControl), default(bool));
 
