@@ -3,15 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMauiApp.Pages.ServiceExterior"
              xmlns:controls="clr-namespace:MyFirstMauiApp.Controls"
+             xmlns:models="clr-namespace:MyFirstMauiApp.Models"
+             xmlns:vm="clr-namespace:MyFirstMauiApp.ViewModels"
+             x:DataType="vm:ServiceExteriorViewModel"
              Title="Service Exterior">
     <VerticalStackLayout>
-        <controls:ServiceDetailControl Text="Appearance of building"/>
-        <controls:ServiceDetailControl Text="Correct Signage to identify department areas" />          
-        <controls:ServiceDetailControl Text="Customer Car Parks clearly identified" />            
-        <controls:ServiceDetailControl Text="Operational hours clearly stated for customer viewing" />            
-        <controls:ServiceDetailControl Text="Vehicles located in designated areas ie WIP, etc" />            
-        <controls:ServiceDetailControl Text="Area and surroundings are to acceptable standard" />            
-        <controls:ServiceDetailControl Text="Waste Oil storage area is well maintained" />     
-        <controls:ServiceDetailControl Text="Rubbish bins or skip bins are emptied (not overflowing)" />
+
+        <CollectionView ItemsSource="{Binding Questions}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Question">
+                    <StackLayout>
+                        <controls:ServiceDetailControl Description="{Binding Description}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>

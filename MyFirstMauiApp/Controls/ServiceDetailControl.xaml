@@ -8,7 +8,7 @@
              >
     <toolkit:Expander>
         <toolkit:Expander.Header>
-            <Button Text="{Binding Text}"
+            <Button Text="{Binding Description}"
                     FontAttributes="Bold"
                     Margin="10,10"
                     LineBreakMode="WordWrap"/>

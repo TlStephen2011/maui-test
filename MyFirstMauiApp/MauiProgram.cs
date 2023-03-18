@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using MyFirstMauiApp.Pages;
+using MyFirstMauiApp.ViewModels;
 
 namespace MyFirstMauiApp;
 
@@ -20,6 +22,11 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+		builder.Services.AddTransient<MainPage>();
+
+		builder.Services.AddTransient<ServiceExteriorViewModel>();
+		builder.Services.AddTransient<ServiceExterior>();
+
 
 		return builder.Build();
 	}

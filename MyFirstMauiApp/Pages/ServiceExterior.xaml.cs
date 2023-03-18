@@ -1,9 +1,15 @@
-﻿namespace MyFirstMauiApp.Pages;
+﻿using MyFirstMauiApp.ViewModels;
+
+namespace MyFirstMauiApp.Pages;
 
 public partial class ServiceExterior : ContentPage
 {
-	public ServiceExterior()
+    ServiceExteriorViewModel _vm;
+
+    public ServiceExterior(ServiceExteriorViewModel vm)
 	{
-		InitializeComponent();
+        InitializeComponent();
+        _vm = vm;
+        BindingContext = _vm;
 	}
 }
