@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMauiApp.ServiceDetailControl"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+             x:Class="MyFirstMauiApp.Controls.ServiceDetailControl"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:MyFirstMauiApp.Controls;assembly=MyFirstMauiApp"
+             x:DataType="local:ServiceDetailControl"
+             >
     <toolkit:Expander>
         <toolkit:Expander.Header>
-            <Button Text="Rubbish bins or skip bins are emptied (not overflowing)"
+            <Button Text="{Binding Text}"
                     FontAttributes="Bold"
                     Margin="10,10"
                     LineBreakMode="WordWrap"/>
