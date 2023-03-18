@@ -13,7 +13,21 @@ public partial class MainPage : ContentPage
 
     private async void GoToQuestion(object sender, EventArgs e) {
         var questionType = (QuestionType)((Button)sender).CommandParameter;
-        await Navigation.PushAsync(new ServiceExterior());
+
+        switch (questionType)
+        {
+            case QuestionType.ServiceExterior:
+                await Navigation.PushAsync(new ServiceExterior());
+                break;
+            case QuestionType.ServiceReception:
+                await Navigation.PushAsync(new ServiceReception());
+                break;
+            default:
+                Console.WriteLine("Invalid page");
+                break;
+        }
+
+        
     }
 }
 

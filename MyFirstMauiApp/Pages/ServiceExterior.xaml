@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMauiApp.Pages.ServiceExterior"
              xmlns:controls="clr-namespace:MyFirstMauiApp.Controls"
-             Title="ServiceExterior">
+             Title="Service Exterior">
     <VerticalStackLayout>
         <controls:ServiceDetailControl Text="Appearance of building"/>
         <controls:ServiceDetailControl Text="Correct Signage to identify department areas" />          
