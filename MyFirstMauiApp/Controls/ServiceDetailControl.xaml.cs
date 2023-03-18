@@ -1,4 +1,4 @@
-namespace MyFirstMauiApp;
+namespace MyFirstMauiApp.Controls;
 
 public partial class ServiceDetailControl : ContentView
 {
@@ -13,6 +13,9 @@ public partial class ServiceDetailControl : ContentView
 
     public static readonly BindableProperty ActionDateProperty =
         BindableProperty.Create(nameof(ActionDate), typeof(DateTime), typeof(ServiceDetailControl), default(DateTime));
+
+    public static readonly BindableProperty TextProperty =
+        BindableProperty.Create(nameof(Text), typeof(string), typeof(ServiceDetailControl), default(string));
 
     public bool IsDone
     {
@@ -36,6 +39,12 @@ public partial class ServiceDetailControl : ContentView
     {
         get => (DateTime)GetValue(ActionDateProperty);
         set => SetValue(ActionDateProperty, value);
+    }
+
+    public string Text
+    {
+        get => (string)GetValue(TextProperty);
+        set => SetValue(TextProperty, value);
     }
 
     public ServiceDetailControl()
