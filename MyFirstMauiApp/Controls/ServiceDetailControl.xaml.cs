@@ -11,11 +11,12 @@ public partial class ServiceDetailControl : ContentView
     public static readonly BindableProperty CommentProperty =
         BindableProperty.Create(nameof(Comment), typeof(string), typeof(ServiceDetailControl), default(string));
 
+    public static readonly BindableProperty DescriptionProperty =
+        BindableProperty.Create(nameof(Description), typeof(string), typeof(ServiceDetailControl), default(string));
+
     public static readonly BindableProperty ActionDateProperty =
         BindableProperty.Create(nameof(ActionDate), typeof(DateTime), typeof(ServiceDetailControl), default(DateTime));
 
-    public static readonly BindableProperty TextProperty =
-        BindableProperty.Create(nameof(Text), typeof(string), typeof(ServiceDetailControl), default(string));
 
     public bool IsDone
     {
@@ -41,15 +42,14 @@ public partial class ServiceDetailControl : ContentView
         set => SetValue(ActionDateProperty, value);
     }
 
-    public string Text
+    public string Description
     {
-        get => (string)GetValue(TextProperty);
-        set => SetValue(TextProperty, value);
+        get => (string)GetValue(DescriptionProperty);
+        set => SetValue(DescriptionProperty, value);
     }
 
     public ServiceDetailControl()
 	{
-        BindingContext= this;
 		InitializeComponent();
 	}
 }

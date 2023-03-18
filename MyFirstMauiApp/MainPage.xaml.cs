@@ -6,9 +6,12 @@ namespace MyFirstMauiApp;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
+    ServiceExterior _serviceExteriorPage;
+
+    public MainPage(ServiceExterior serviceExterior)
 	{
 		InitializeComponent();
+        _serviceExteriorPage = serviceExterior;
 	}
 
     private async void GoToQuestion(object sender, EventArgs e) {
@@ -17,7 +20,7 @@ public partial class MainPage : ContentPage
         switch (questionType)
         {
             case QuestionType.ServiceExterior:
-                await Navigation.PushAsync(new ServiceExterior());
+                await Navigation.PushAsync(_serviceExteriorPage);
                 break;
             case QuestionType.ServiceReception:
                 await Navigation.PushAsync(new ServiceReception());
